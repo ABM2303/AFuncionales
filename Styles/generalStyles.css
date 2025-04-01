@@ -1,0 +1,629 @@
+:root {
+    --Background: #f5f5f5;
+    --Primary: #3b1b2f;
+    --Secondary: #691549;
+    --OnBackground: #000000;
+    --Gaussian: url('https://upload.wikimedia.org/wikipedia/commons/5/5c/Image_gaussian_noise_example.png'), linear-gradient(90deg, rgb(75, 35, 60), rgb(71, 29, 56));
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+html * {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+table, th {
+    font-family: "Asap Condensed", sans-serif;
+    font-style: normal;
+    color: var(--Primary);
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.5px;
+}
+
+div,
+span,
+p,
+a,
+label,
+input,
+button,
+ul,
+li,
+td {
+    font-family: "Almarai", sans-serif;
+    font-style: normal;
+    font-size: 100%;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+/*########## Errores ##########*/
+#Errores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#Error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    height: fit-content;
+    background-color: var(--Background);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 1px #00000090;
+    border-left: 10px solid red;
+    padding: 0px 20px;
+    margin: 20px;
+}
+
+#Avisos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#Aviso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    height: fit-content;
+    background-color: var(--Background);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 1px #00000090;
+    border-left: 10px solid green;
+    padding: 0px 20px;
+    margin: 20px;
+}
+
+#mensajeContraseña {
+    font-weight: bold;
+}
+
+/*########## Form ##########*/
+label {
+    font-weight: bold;
+    font-size: 100%;
+    font-family: "Asap Condensed", sans-serif;
+    font-style: normal;
+    font-size: 100%;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+.req::before {
+    content: "* ";
+    color: red;
+    font-size: 120%;
+}
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    border-bottom: 2px solid var(--Secondary);
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+input:focus {
+    outline: 2px solid var(--Secondary);
+}
+
+input::placeholder {
+    font-weight: bold;
+    font-size: 100%;
+    font-family: "Asap Condensed", sans-serif;
+    font-style: normal;
+    font-size: 100%;
+}
+
+input[type="submit"] {
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--Secondary);
+    color: var(--Background);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+input[type="submit"]>* {
+    padding: 5px 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--Primary);
+    transition: all 0.3s;
+}
+
+input[type="submit"]:active {
+    background-color: #000000;
+    scale: 0.9;
+    transition: all 0.3s;
+}
+
+input[type="submit"]:focus {
+    background-color: var(--Primary);
+}
+
+input[type="text"] {
+    font-family: "Asap Condensed", sans-serif;
+    font-style: normal;
+    font-size: 100%;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    border-bottom: 2px solid var(--Secondary);
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    font-family: "Asap Condensed", sans-serif;
+    font-style: normal;
+    font-size: 100%;
+}
+
+select:focus {
+    outline: 2px solid var(--Secondary);
+}
+
+textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    border-bottom: 2px solid var(--Secondary);
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    font-family: "Asap Condensed", sans-serif;
+    font-style: normal;
+    font-size: 120%;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+textarea:focus {
+    outline: 2px solid var(--Secondary);
+}
+
+button {
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--Secondary);
+    color: var(--Background);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button>* {
+    padding: 5px 10px;
+}
+
+button:hover {
+    background-color: var(--Primary);
+    transition: all 0.3s;
+}
+
+button:active {
+    background-color: #000000;
+    scale: 0.9;
+    transition: all 0.3s;
+}
+
+button:focus {
+    background-color: var(--Primary);
+    transition: all 0.3s;
+}
+
+.botoneditar {
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--Secondary);
+    color: var(--Background);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.botoneditar>* {
+    padding: 5px 10px;
+}
+
+.botoneditar:hover {
+    background-color: var(--Primary);
+    transition: all 0.3s;
+}
+
+.botoneditar:active {
+    background-color: #000000;
+    scale: 0.9;
+    transition: all 0.3s;
+}
+
+.botoneditar:focus {
+    background-color: var(--Primary);
+    transition: all 0.3s;
+}
+
+.inputFileLabel {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 600px;
+    border-radius: 10px;
+    border: 2px dashed var(--Secondary);
+    cursor: pointer;
+    transition: background-color .2s ease-in-out, border .2s ease-in-out;
+    margin: 10px;
+}
+
+.inputFileSpan {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 120%;
+    color: var(--Secondary);
+    transition: all 0.3s;
+    width: 100%;
+    pointer-events: none;
+}
+
+.inputFileLabel:hover {
+    background-color: #69154941;
+    border: 2px dashed var(--Primary);
+}
+
+.inputFileLabel.drag-active {
+    background-color: #69154941;
+    border: 2px dashed var(--Primary);
+}
+
+
+input[type="file"] {
+    width: 80%;
+    text-align: center;
+    pointer-events: none;
+}
+
+input[type="file"]::file-selector-button {
+    margin-right: 20px;
+    border: none;
+    background-color: var(--Secondary);
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color .2s ease-in-out;
+    pointer-events: all;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background: var(--Primary);
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+input:checked + .slider {
+    background-color: var(--Secondary);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px var(--Secondary);
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.FormData {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    padding: 10px;
+}
+
+.FormData > * {
+    width: 100%;
+}
+
+.FormData > *:not(label) {
+    min-height: 47px;
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Radio buttons Menu */
+.radioMenu {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.radioMenu label {
+    display: flex;
+    gap: 5px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: var(--Background);
+    color: var(--Primary);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.radioMenu label:hover {
+    background-color: #69154941;
+    color: var(--Secondary);
+}
+
+.radioMenu input[type="radio"] {
+    display: none;
+}
+
+.radioMenu input[type="radio"]:checked+label {
+    background-color: var(--Secondary);
+    color: var(--Background);
+}
+
+/*########## Tooltip ##########*/
+[data-tooltip] {
+    position: relative;
+}
+
+[data-tooltip]::after {
+    content: var(--tooltip-content, attr(data-tooltip));
+    position: absolute;
+    bottom: 120%;
+    left: var(--tooltip-left, 50%);
+    transform: translateX(-50%);
+    background-color: var(--Background);
+    color: var(--Secondary);
+    border: var(--Primary) 2px solid;
+    border-radius: 5px;
+    padding: 3px 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .2s ease-out;
+    white-space: nowrap;
+    font-family: "Almarai", sans-serif;
+    font-style: normal;
+    font-size: 20px;
+}
+
+[data-tooltip]:hover::after {
+    transition-delay: .3s;
+    opacity: 1;
+    visibility: visible;
+}
+
+/*########## Contenido ##########*/
+
+.PageTitle {
+    font-size: 250%;
+    padding: 20px;
+}
+
+.sinacceso{
+    padding: auto;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#UserTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#UserTitle h2 {
+    font-size: 220%;
+}
+
+#UserTitle h3 {
+    font-size: 150%;
+}
+
+hr {
+    border: 0;
+    border-top: 2px solid var(--Secondary);
+    margin: 20px auto 20px auto;
+    width: 90%;
+}
+
+/*########## Tabla ##########*/
+
+table {
+    width: 60%;
+    font-size: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th, td {
+    text-align: left;
+}
+
+th {
+    padding: 10px;
+    border-bottom: 2px solid #691549;
+}
+
+td {
+    padding: 10px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #69154928;
+}
+
+tr {
+    border-bottom: 2px solid #74325a57;
+}
+
+.tablaCancelado {
+    background-color: #ff000080 !important; /* color rojo */
+}
+
+.tablaVerificado {
+    background-color: #00aa0080 !important; /* color verde */
+}
+
+.tablaComentado {
+    background-color: #ff7300e1 !important; /* color rojo */
+}
+
+/*########## Menú de opciones ##########*/
+
+.OpcMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: 2px solid var(--Primary);
+    margin-top: 50px;
+    border-radius: 10px;
+    background-color: var(--Background);
+    overflow: hidden;
+}
+
+.OpcMenuButton {
+    text-decoration: none;
+    text-align: center;
+    color: var(--Primary);
+    padding: 10px;
+    width: 100%;
+    font-size: 130%;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+.OpcMenuButton:hover {
+    background-color: #801456 !important;
+    color: var(--Background);
+}
+
+.OpcMenuButton:active {
+    background-color: var(--Primary);
+    font-size: 120%;
+}
+
+.OpcMenuButton.active {
+    background-color: var(--Secondary);
+    color: var(--Background);
+}
+
+.OpcMenu hr {
+    margin: 0 auto 0 auto !important;
+}
+
+.OpcMenuContent {
+    border: 2px solid var(--Secondary);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: font-size .1s, opacity .25s, margin .25s, padding .25s;
+}
+
+.OpcMenuContent.show {
+    /* unshrink, then fade in */
+    transition: font-size .1s, opacity .25s, margin .25s, padding .25s;
+}
+
+.OpcMenuContent.hide {
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    /* fade out, then shrink */
+}
